@@ -1,0 +1,42 @@
+﻿@*@inject UserManager<User> userManager
+@model Cart
+@{
+	string userId = userManager.GetUserId(User);
+ }
+<h1>Your Cart</h1>
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>Name</th>
+            <th>Price</th>
+            <th>Type</th>
+            <th>Color</th>
+            <th>Quantity</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+
+       @foreach (CartProduct c in Model.CartProducts)
+        {
+            <tr>
+
+                <td>@c.product.ProName</td>
+                <td>@c.product.ProPrice</td>
+                <td>@c.product.category.CateName</td>
+                <td>@c.product.Color</td>
+                <td>@c.Quantity</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="d-flex justify-content-end pt-3">
+    <p class="fs-5 fw-bold fst-italic">Total Price= @Model.TotalPrice</p>
+</div>
+
+<div>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-success mb-1 "> Back to Product</a>
+</div>
+
+*@

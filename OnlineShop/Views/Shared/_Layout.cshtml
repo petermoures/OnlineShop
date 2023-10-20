@@ -1,0 +1,157 @@
+﻿@inject SignInManager<User> signInManager
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] OnlineShop</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/OnlineShop.styles.css" asp-append-version="true" />
+    
+</head>
+<body>
+    <header> 
+        @if(User.IsInRole("admin"))
+        {
+            <div class="d-flex justify-content-between border-bottom shadow-sm mb-5 p-1 ps-5 pe-5 bg-white rounded fs-5 fw-bold fst-italic">
+                    <div>
+                        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light ">
+                            <ul class="navbar-nav ">
+                                <li class="nav-item">
+                                    <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Index"> OnlineShop </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                  <div>
+                      <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light ">
+                          <ul class="navbar-nav ">
+
+                           
+                              <li class="nav-item ps-5">
+                               <a class="nav-link text-dark" asp-area="" asp-controller="Order" asp-action="GetAllOrders">Orders</a>
+
+                               </li>
+                           
+
+                            <li class="nav-item ps-5">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="Get">Product</a>
+                            </li>
+
+                            <li class="nav-item ps-5">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Role" asp-action="AddRole">Role</a>
+                            </li>
+
+                        </ul>
+                      
+                    </nav>
+                </div>
+                <div>
+                    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light ">
+                        <ul class="navbar-nav flex-grow-1">
+                           
+                                <li class="nav-item ">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="SignOut">SignOut </a>
+                                </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+        }
+         else
+        {
+        <div class="d-flex justify-content-between border-bottom shadow-sm mb-5 p-1 ps-5 pe-5 bg-white rounded fs-5 fw-bold fst-italic">
+            <div>
+                <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light ">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Home" asp-action="Index"> OnlineShop </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light ">
+                    <ul class="navbar-nav ">
+
+                        <li class="nav-item dropdown pe-5">
+                            <a class="nav-link active dropdown-toggle" data-bs-toggle="dropdown">
+                                Categores
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" asp-controller="Category" asp-action="GetLaptops">Laptop</a></li>
+                                <li><a class="dropdown-item" asp-controller="Category" asp-action="GetPhones">Mobile Phone</a></li>
+                                <li><a class="dropdown-item" asp-controller="Category" asp-action="GetSamrtTv">SmartTV</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item ps-4">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Cart" asp-action="ItemInCart"> MyCart </a>
+                        </li>
+
+                            <li class="nav-item ps-5">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Order" asp-action="GetAllOrders">Orders</a>
+
+                            </li>
+
+
+                            @* <li class="nav-item ps-5">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="Get">Product</a>
+                        </li>*@
+                       
+
+                        <li class="nav-item ps-5">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Favourite" asp-action="FavouriteItem">Favourite Item</a>
+                        </li>
+                            @*<li class="nav-item ps-5">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Role" asp-action="AddRole">Role</a>
+                        </li>*@
+                        
+                    </ul>
+
+                </nav>
+            </div>
+            <div>
+                <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light ">
+                    <ul class="navbar-nav flex-grow-1">
+                        @if (signInManager.IsSignedIn(User))
+                        {
+                            <li class="nav-item ">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="SignOut">SignOut </a>
+                            </li>
+
+
+                        }
+                        else
+                        {
+                            <li class="nav-item pe-3">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Register"> Register </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="SignIn">SignIn </a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        }
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    
+   
+ 
+</body>
+</html>

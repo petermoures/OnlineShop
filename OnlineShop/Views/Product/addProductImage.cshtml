@@ -1,0 +1,21 @@
+﻿@model AddProductImageViewModel
+<div class="fs-2 text-center fw-bold fst-italic m-5">Add Image for Product</div>
+<div class="mx-auto w-50 ">
+    <form asp-controller="Product" asp-action="addProductImage" method="post">
+        <div class="mb-1 form-group">
+            <label asp-for="productId" class="form-label fs-5 fst-italic"> Product Id</label>
+            <input asp-for="productId" class="form-control ">
+            <span class="text-danger fst-italic" asp-validation-for="productId"></span>
+        </div>
+        <div class="mb-1 form-group">
+            <label asp-for="Path" class="form-label fs-5 fst-italic"> Image Path</label>
+            <input asp-for="Path" class="form-control ">
+            <span class="text-danger fst-italic" asp-validation-for="Path"></span>
+        </div>
+      
+        <div class="d-grid gap-2  col-8 mx-auto pt-4">
+            <button type="submit" class="btn btn-primary  fst-italic ">Add</button>
+        </div>
+
+    </form>
+</div>

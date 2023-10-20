@@ -1,0 +1,125 @@
+﻿@model UpdateProductViewModel
+
+@inject OnlineShopeEntity context
+@{
+    var cates = context.Categories.ToList();
+}
+
+<div class="fs-2 text-center fw-bold fst-italic m-5">Edit Product</div>
+<div class="mx-auto w-50 ">
+    <form asp-controller="Product" asp-action="UpdateProduct" method="post" onsubmit="return(validateForm());">
+        
+        <div class="mb-1 form-group">
+            <label for="prodNameId" class="form-label fs-5 fst-italic"> Product Name</label>
+            
+            <input type="text" id="prodNameId" name="ProductName" value="@ViewBag.prod.ProName" class="form-control " required>
+            <span id="reqName" style="display:none" class="text-danger fst-italic"> Product name more than 5 charecter</span>
+            <span class="text-danger fst-italic" asp-validation-for="ProductName"></span>
+        </div>
+        <div class="mb-1 form-group">
+        <label for="cvt" class="form-label fs-5 fst-italic"> Product Price</label>
+        <input type="number" id="cvt" name="ProductPrice" value="@ViewBag.prod.ProPrice" class="form-control" required>
+            <span id="reqprice" style="display:none" class="text-danger fst-italic"> Product price must not zero or nigative number</span>
+            <span class="text-danger fst-italic" asp-validation-for="ProductPrice"></span>
+        </div>
+        <div class="mb-1 form-group">
+        <label for="vn" class="form-label fs-5 fst-italic">Product Color</label>
+        <input type="text" id="vn" name="Color" value="@ViewBag.prod.Color" class="form-control">
+           
+        <span class="text-danger fst-italic" asp-validation-for="Color"></span>
+        </div>
+        <div class="mb-1 form-group">
+        <label for="vbn" class="form-label fs-5 fst-italic">Quantity of product</label>
+            <input type="number" id="vbn" name="QuantityToProduct" value="@ViewBag.prod.QuantityForAddPro" class="form-control" required>
+            <span id="reqQuan" style="display:none" class="text-danger fst-italic"> Quantity to Product  must not nigative number</span>
+            <span class="text-danger fst-italic" asp-validation-for="QuantityToProduct"></span>
+        </div>
+
+        @*
+        <div class="mb-1 form-group">
+        <label for="nmk" class="form-label fs-5 fst-italic">Category Name</label>
+        <input type="text" id="nmk" name="CatName" value="@ViewBag.prod.category.CateName" class="form-control" required>
+        <span id="reqCate" style="display:none" class="text-danger fst-italic"> Category name more than 5 charecter</span>
+        <span class="text-danger fst-italic" asp-validation-for="CatName"></span>
+        </div>
+        *@
+        
+        
+        
+
+
+        
+        <div style="padding-top:15px;" class="form-group pt-2 mb-4">
+        <label class=" fs-5 fst-italic mb-2" >Category Name</label>
+            <select name="CatId" class="form-select" aria-label="Default select example" style="font-size:18px" required>
+        <option></option>
+        @{
+        foreach (var item in cates)
+        {
+
+        <option value="@item.CateId">@item.CateName</option>
+
+
+        }
+        }
+
+        </select>
+
+        </div>
+        
+
+        
+
+
+
+        <div class="mb-2 form-check">
+            <input asp-for="Available" class="form-check-input">
+            <label asp-for="Available" class="form-check-label  fs-5 fst-italic">Available</label>
+            <span class="text-danger fst-italic" asp-validation-for="Available"></span>
+        </div>
+ 
+        <div class="d-grid gap-2  col-8 mx-auto pt-4">
+            <button type="submit" class="btn btn-primary  fst-italic ">Edit</button>
+        </div>
+
+    </form>
+</div>
+<script>
+    function validateForm()
+    {
+        
+        var name=document.getElementById("prodNameId").value;
+        var valid = document.getElementById("reqName");
+        var cat = document.getElementById("nmk").value;
+        var validCat=document.getElementById("reqCate")
+        var price = document.getElementById("cvt").value;
+        var validPrice=document.getElementById("reqprice");
+        var Quantity = document.getElementById("vbn").value;
+        var validQuantity = document.getElementById("reqQuan");
+        if (name.length<5){
+            //alert("name is required")
+            valid.style.display = "block"
+            return false;
+        }
+
+        else if (price==0||price<0) 
+        {
+            validPrice.style.display = "block";
+            return false;
+        }
+        else if (Quantity<0) 
+        {
+            validQuantity.style.display = "block";
+            return false;
+        }
+       // else if (cat.length<5) {
+
+          //validCat.style.display="block";
+          // return false;
+       // }
+       
+   
+        return true;
+    }
+
+</script>

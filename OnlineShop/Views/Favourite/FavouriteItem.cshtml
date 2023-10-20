@@ -1,0 +1,78 @@
+﻿@model Favourite
+<h1 class="fst-italic">Favourite Items</h1>
+<hr />
+<br />
+<br />
+<table class="table text-center">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Type</th>
+            <th>Color</th>
+            <th>Add to Cart</th>
+            <th>Delete From Favourite</th>
+            
+            
+            
+            
+
+        </tr>
+    </thead>
+    <tbody >
+
+        @foreach (FavouriteProduct c in Model.favouriteProducts)
+        {
+            <tr>
+                @foreach(ProductImage image in c.product.ProductImagsss)
+                {
+                    <td><img src="~/photo/@image.path"width="80" height="60"/></td>
+                    break;
+                }
+                @*<td><img src="~/photo/@c."width="80" height="60"/></td>*@
+                <td>@c.product.ProName</td>
+                <td>@c.product.ProPrice</td>
+                <td >@c.product.category.CateName</td>
+                <td>@c.product.Color</td>
+                <td>
+                    <a onclick="AddItemToCart()" asp-controller="Favourite" asp-action="addItemToCart" asp-route-Id="@c.prodID" class="btn btn-outline-success  ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" fill="currentColor" class="bi bi-cart-plus-fill" viewBox="0 0 16 16">
+                            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0z" />
+                        </svg>
+                       </a>
+                 </td>
+                <td>
+                    <a asp-controller="Favourite" asp-action="DeleteItemFromFavourite" asp-route-Id="@c.product.Id" class="btn btn-outline-danger">
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                            <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
+                            </svg>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="d-flex justify-content-between pt-4 ">
+     <a asp-controller="Home" asp-action="Index" class="btn btn-success text-black mb-1 d-grid gap-2 col-2 fs-5 fw-bold fst-italic">All Products</a>
+    <a asp-controller="Category" asp-action="GetLaptops" class="btn btn-primary text-black mb-1 d-grid gap-2 col-2 fs-5 fw-bold fst-italic">Laptops</a>
+    <a asp-controller="Category" asp-action="GetPhones" class="btn btn-info text-black mb-1 d-grid gap-2 col-2 fs-5 fw-bold fst-italic">Phones</a>
+    <a asp-controller="Category" asp-action="GetSamrtTv" class="btn btn-secondary text-black mb-1 d-grid gap-2 col-2 fs-5 fw-bold fst-italic">TV</a>
+ </div>
+
+ <div id="customm">
+	<div id="boxingg">
+		<div class="heading">
+			Attention
+		</div>
+		<div class="content">
+			<p style="font-size:18px">This Product Add To Your Cart</p>
+			<button type="button" id="confirmbttnn" onclick="hided()">ok</button>
+		</div>
+	</div>
+</div>
+
+
+<script>
+    
+</script>

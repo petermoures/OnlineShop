@@ -1,0 +1,105 @@
+﻿@model product
+<h1>Product Details</h1>
+<hr />
+<form>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="row g-2 align-items-center p-3">
+                    <div class="col-auto">
+                        <label class="col-form-label pe-5 fw-bold fs-5">Name</label>
+                    </div>
+                    <div class="col-auto w-75 ">
+                        <input type="text" readonly class="form-control fs-5" value="@Model.ProName">
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center p-3">
+                    <div class="col-auto">
+                        <label class="col-form-labe pe-5 fw-bold fs-5">Price</label>
+                    </div>
+                    <div class="col-auto w-75">
+                        <input type="text" readonly class="form-control fs-5" value="@Model.ProPrice">
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center p-3">
+                    <div class="col-auto">
+                        <label class="col-form-label pe-5 fw-bold fs-5"> Color</label>
+                    </div>
+                    <div class="col-auto w-75">
+                        <input type="text" readonly class="form-control fs-5" value="@Model.Color">
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center p-3">
+                    <div class="col-auto">
+                        <label class="col-form-label pe-4 fw-bold fs-5">Quantity</label>
+                    </div>
+                    <div class="col-auto w-75">
+                        <input type="text" readonly class="form-control fs-5" name="Ctype" value="@Model.QuantityForAddPro">
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center p-3">
+                    <div class="col-auto">
+                        <label class="col-form-label pe-5 fw-bold fs-5">Type</label>
+                    </div>
+                    <div class="col-auto w-75">
+                        <input type="text" readonly class="form-control fs-5" name="Ctype" value="@Model.category.CateName">
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                @*<img src="~/photo/@Model.Image" width="450" height="400" />*@
+                <div class="container">
+
+                    <div class="row pt-2">
+
+                        @foreach (ProductImage image in Model.ProductImagsss)
+                        {
+                            <div id="im2" class="col-12 pb-2">
+                                <img id="ShownImage" src="~/photo/@image.path" width="450" height="300" />
+                            </div>
+                            break;
+                        }
+                        @{
+                            int imageNumber = 0;
+                        }
+                        @foreach (ProductImage image2 in Model.ProductImagsss)
+                        {
+                            var ID = "Image_" + @imageNumber;
+                            <div id="im1" class="col-3">
+                                <img onmouseover="changeImage(event)" id="@ID" style=" border-radius: 10%" src="~/photo/@image2.path" width="110" height="120" />
+                            </div>
+                            imageNumber++;
+                        }
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<div class="mt-5">
+    <a asp-controller="Product" asp-action="Get" class="btn btn-success mb-1">Back to Product</a>
+</div>
+
+
+<script>
+    debugger;
+    //var prt = document.getElementById("im1").innerHTML;
+
+
+    function changeImage(e) {
+
+        var ShownImage = document.getElementById("ShownImage");
+        var oldImageSrc = ShownImage.src;
+        //document.getElementById("im2").innerHTML = prt;
+        newImageID = $(e.target).attr('id');
+        var newImage = document.getElementById(newImageID);
+        var newImageSrc = newImage.src;
+        ShownImage.src = newImageSrc;
+        newImage.src = oldImageSrc;
+
+
+    }
+</script>

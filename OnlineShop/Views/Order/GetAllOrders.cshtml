@@ -1,0 +1,95 @@
+﻿@model IEnumerable<Order>
+@inject OnlineShopeEntity context
+
+<h1  class=" fst-italic">Orders</h1>
+<hr/>
+<br />
+<br />
+<table class="table fst-italic text-center ">
+    <thead>
+        <tr>
+            @if(User.IsInRole("admin"))
+              {
+                <th>Delete</th>
+                <th>Edit</th>
+              }
+            
+            <th>Name</th>
+            <th>Address</th>
+            <th>PhoneNumber</th>
+            <th class="">DateOrder</th>
+            <th>Product Details</th>  
+           
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (Order c in Model)
+        {
+            <tr class="">
+                @if(User.IsInRole("admin"))
+                 {
+                    <td class="fw-bold"><a asp-controller="Order" asp-action="DeleteOrder" asp-route-Id="@c.Id" class="btn btn-danger text-black ">Delete</a></td>
+                    <td class="fw-bold"><a asp-controller="Order" asp-action="UpdateOrder" asp-route-Id="@c.Id" class="btn btn-info ">Edit</a></td>
+                 }
+                <td class="fw-bold">@c.Name</td>
+                <td class="fw-bold">@c.Address</td>
+                <td class="fw-bold">@c.PhoneNumber</td>
+                <td class="fw-bold">@c.OrderDate</td>
+                <td >
+                    <table class="table table-bordered border-secondary">
+                        <thead>
+                            <tr >
+
+                                <th>ProductName</th>
+                                <th>Productprice</th>
+                                <th>color</th>
+                                <th>CategoryName</th>
+                                <th>Quantity</th>
+                                <th>Image</th>
+
+
+                            </tr>
+                        </thead>
+
+                        <tbody >
+                            @foreach (OrderProduct o in c.OrderProducts)
+                            {
+                                <tr>
+
+                                    <td>
+                                        @o.product.ProName
+                                    </td>
+                                    <td>
+                                        @o.product.ProPrice
+                                    </td>
+                                    <td >
+                                       @o.product.Color
+                                   </td>
+                                    <td >
+                                        @o.product.category.CateName
+                                    </td>
+                                    <td>
+                                       @o.Quantity
+                                    </td>
+                                    <td >
+                                       @{
+                                            var prodImg = context.ProductImages.FirstOrDefault(a => a.prottId ==o.ProductId);
+                                        }
+                                        <img src="~/photo/@prodImg.path" width="100" height="50">
+
+                                    </td>
+                                </tr>
+                            }
+                        </tbody> 
+                    </table> 
+                </td>
+               
+                
+            </tr>
+        }
+    </tbody>
+</table>
+<div>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-success">Back to Products</a>
+</div>

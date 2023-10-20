@@ -1,0 +1,56 @@
+﻿@model IEnumerable<product>
+@inject UserManager<User> userManager
+@inject SignInManager<User> signInManager
+
+@{
+	string userId = userManager.GetUserId(User);
+}
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+
+	@foreach (product pro in Model)
+	  {
+		<div class="col">
+			<div class="card">
+				<div class="card-header fw-bold">
+					@pro.ProName
+				</div>
+				@foreach(ProductImage image in pro.ProductImagsss)
+				{
+					<img src="~/photo/@image.path" class="card-img " style="height:22rem;">
+					break;
+				}
+				@*<img src="~/photo/@pro.Image" class="card-img " style="height:22rem;">*@
+				@if(signInManager.IsSignedIn(User))
+				{
+				  <div class="card-body d-flex justify-content-between">
+					<span class="card-text fw-bold"> @pro.ProPrice</span>
+					<div class="d-flex justify-content-end">
+						<a asp-controller="Category" asp-action="AddToCartLap" asp-route-Id="@pro.Id" asp-route-userId="@userId" class="btn  btn-primary me-1">Add to Cart</a>
+						<a asp-controller="Product" asp-action="Details" asp-route-Id="@pro.Id" class="btn  btn-primary me-1">Details</a>
+						<a asp-controller="Category" asp-action="addToFavouriteLap" asp-route-Id="@pro.Id" asp-route-userId="@userId" class="btn  btn-primary">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+								<path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+							</svg>
+						</a>
+					</div>
+				  </div>
+				}
+				else
+				{
+					<div class="card-body d-flex justify-content-between">
+						<span class="card-text fw-bold"> @pro.ProPrice</span>
+						<div class="d-flex justify-content-end">
+							
+							<a asp-controller="Product" asp-action="Details" asp-route-Id="@pro.Id" class="btn  btn-primary me-1">Details</a>
+							
+						</div>
+					</div>
+
+				}
+				
+			</div>
+		</div>
+				
+	  }
+</div>

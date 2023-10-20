@@ -1,0 +1,27 @@
+﻿@model SignInModel
+<h1 class="text-center fst-italic  p-4"> Sign In </h1>
+<div class="mx-auto w-50 shadow-lg rounded p-4">
+    <form asp-controller="User" asp-action="SignIn" method="post">
+        <div style="color:red;" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group ">
+            <label class=" fs-5 fst-italic" asp-for="UserName"></label>
+            <input class="form-control border-dark border-end-0 border-start-0 border-top-0" asp-for="UserName" />
+            <span style="color:red;font-size:80%;" asp-validation-for="UserName"></span>
+        </div>
+        <div class="form-group ">
+            <label class=" fs-5 fst-italic" asp-for="Password"></label>
+            <input class="form-control border-dark  border-end-0 border-start-0 border-top-0" asp-for="Password" />
+            <span style="color:red;font-size:80%;" asp-validation-for="Password"></span>
+        </div>
+        <div class="form-group ">
+
+            <input asp-for="RememberMe" />
+            <label class=" fs-5 fst-italic" asp-for="RememberMe"></label>
+            <span asp-validation-for="RememberMe"></span>
+        </div>
+        <div class="d-grid gap-2  col-8 mx-auto pt-4">
+            <input type="submit" value="Sign In" class="btn btn-primary text-info fst-italic" />
+        </div>
+
+    </form>
+</div>

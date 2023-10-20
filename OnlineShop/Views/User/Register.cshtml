@@ -1,0 +1,55 @@
+﻿@model AddUserViewModel
+@addTagHelper "*, Microsoft.AspNet.Mvc.TagHelpers"
+<h1 style="padding-bottom:20px" class="text-center fst-italic">Register </h1>
+
+<div class="mx-auto p-4 shadow-lg w-50 rounded">
+    <form asp-controller="User" asp-action="Register" method="post">
+        <div style="color:red;" asp-validation-summary="ModelOnly"></div>
+
+        <div style="padding-top:15px;" class="form-group ">
+            <label class=" fs-5 fst-italic" asp-for="FirstName"></label>
+            <input class="form-control   border-dark border-end-0 border-start-0 border-top-0 " asp-for="FirstName" />
+            <span style="color:red;font-size:80%;" asp-validation-for="FirstName"></span>
+        </div>
+        <div style="padding-top:15px;" class="form-group ">
+            <label class=" fs-5 fst-italic" asp-for="LastName"></label>
+            <input class="form-control border-dark border-end-0 border-start-0 border-top-0" asp-for="LastName" />
+            <span style="color:red;font-size:80%;" asp-validation-for="LastName"></span>
+        </div>
+        <div style="padding-top:15px;" class="form-group ">
+            <label class=" fs-5 fst-italic" asp-for="Email"></label>
+            <input class="form-control border-dark border-end-0 border-start-0 border-top-0" asp-for="Email" />
+            <span style="color:red;font-size:80%;" asp-validation-for="Email"></span>
+        </div>
+        <div style="padding-top:15px;" class="form-group ">
+            <label class=" fs-5 fst-italic" asp-for="UserName"></label>
+            <input class="form-control border-dark border-end-0 border-start-0 border-top-0" asp-for="UserName" />
+            <span style="color:red;font-size:80%;" asp-validation-for="UserName"></span>
+        </div>
+
+
+        <div style="padding-top:15px;" class="form-group ">
+            <label class=" fs-5 fst-italic" asp-for="Password"></label>
+            <input class="form-control border-dark border-end-0 border-start-0 border-top-0" asp-for="Password" />
+            <span style="color:red;font-size:80%;" asp-validation-for="Password"></span>
+        </div>
+        <div style="padding-top:15px;" class="form-group">
+            <label class=" fs-5 fst-italic" asp-for="ConfirmPassword"></label>
+            <input class="form-control border-dark border-end-0 border-start-0 border-top-0" asp-for="ConfirmPassword" />
+            <span style="color:red;font-size:80%;" asp-validation-for="ConfirmPassword"></span>
+        </div>
+        @*
+        <div style="padding-top:15px;" class="form-group">
+        <label class=" fs-5 fst-italic" asp-for="Role"></label>
+        <select class="form-control border-dark border-end-0 border-start-0 border-top-0" asp-items="@ViewBag.Roles" asp-for="Role"></select>
+        <span style="color:red;font-size:80%;" asp-validation-for="Role"></span>
+        </div>
+        *@
+        
+        <div class="d-grid gap-2 col-8 mx-auto pt-4">
+            <input type="submit" value="Sign Up" class="btn btn-primary text-info fst-italic" />
+        </div>
+    </form>
+
+</div>
+

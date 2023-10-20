@@ -1,0 +1,136 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+#customAlert
+{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:999;
+    background-color:rgba(255,255,255,0.75);
+}
+#box
+{
+    border-radius:5px;
+    margin-top:100px;
+    margin-left:400px;
+    height:180px;
+    width:500px;
+    text-align:center;
+    background-color:white;
+    box-shadow:2px 2px 8px black;
+}
+.heading 
+{
+    color: white;
+    background-color: #339966;
+    font-size:22px;
+    font-style:italic;
+    padding: 5px;
+}
+.content
+{
+    margin-top:40px;
+}
+#confirmbtn
+{
+    height:30px;
+    width:80px;
+    margin-top:20px;
+    margin-left:400px;
+    background-color:#339966;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    text-align:center;
+}
+
+#custom 
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: rgba(255,255,255,0.75);
+}
+
+#boxing 
+{
+    border-radius: 5px;
+    margin-top: 100px;
+    margin-left: 400px;
+    height: 180px;
+    width: 500px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 2px 2px 8px black;
+}
+
+#confirmbttn 
+{
+    height: 30px;
+    width: 80px;
+    margin-top: 20px;
+    margin-left: 400px;
+    background-color: #339966;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+#customm {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: rgba(255,255,255,0.75);
+}
+
+#boxingg {
+    border-radius: 5px;
+    margin-top: 100px;
+    margin-left: 400px;
+    height: 180px;
+    width: 500px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 2px 2px 8px black;
+}
+
+#confirmbttnn {
+    height: 30px;
+    width: 80px;
+    margin-top: 20px;
+    margin-left: 400px;
+    background-color: #339966;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+}

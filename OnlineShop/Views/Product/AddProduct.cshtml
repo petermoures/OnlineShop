@@ -1,0 +1,79 @@
+﻿@model AddproductViewModel
+
+@inject OnlineShopeEntity context
+@{
+    var cates = context.Categories.ToList();
+}
+
+<div class="fs-2 text-center fw-bold fst-italic m-5">Add New Product</div>
+<div class="mx-auto w-50 ">
+    <form asp-controller="Product" asp-action="AddProduct" method="post">
+        <div class="mb-1 form-group">
+            <label asp-for="ProductName" class="form-label fs-5 fst-italic"> Product Name</label>
+            <input asp-for="ProductName" class="form-control ">
+            <span class="text-danger fst-italic" asp-validation-for="ProductName"></span>
+        </div>
+        <div class="mb-1 form-group">
+            <label asp-for="ProductPrice" class="form-label fs-5 fst-italic"> Product Price</label>
+            <input asp-for="ProductPrice" class="form-control ">
+            <span class="text-danger fst-italic" asp-validation-for="ProductPrice"></span>
+        </div>
+        
+        <div class="mb-1 form-group">
+            <label asp-for="Color" class="form-label fs-5 fst-italic"></label>
+            <input asp-for="Color" class="form-control ">
+            <span class="text-danger fst-italic" asp-validation-for="Color"></span>
+        </div>
+
+        <div class="mb-1 form-group">
+            <label asp-for="ImagePath" class="form-label fs-5 fst-italic">Path to Image</label>
+            <input asp-for="ImagePath" class="form-control ">
+            <span class="text-danger fst-italic" asp-validation-for="ImagePath"></span>
+        </div>
+
+
+        <div class="mb-1 form-group">
+            <label asp-for="QuantityToProduct" class="form-label fs-5 fst-italic"> Quantity product</label>
+            <input asp-for="QuantityToProduct" class="form-control ">
+            <span class="text-danger fst-italic" asp-validation-for="QuantityToProduct"></span>
+        </div>
+
+
+        <div style="padding-top:15px;" class="form-group pt-2 mb-4">
+            <label class=" fs-5 fst-italic mb-2" asp-for="CategoryId">Category Name</label>
+            <select asp-for="CategoryId" class="form-select" aria-label="Default select example" style="font-size:18px">
+                <option ></option>
+            @{
+                foreach (var item in cates)
+                {
+                   
+                <option value="@item.CateId">@item.CateName</option>
+               
+
+                }
+            }
+                
+            </select>
+            <span style="color:red;font-size:80%;" asp-validation-for="CategoryId"></span>
+       </div>
+       @*
+        <div style="padding-top:15px;" class="form-group pt-2 mb-4">
+        <label class=" fs-5 fst-italic mb-2" asp-for="CategoryName">Category</label>
+        <select class="form-control" name="CategoryId" asp-items="@ViewBag.Categs" asp-for="CategoryId"></select>
+
+        <span style="color:red;font-size:80%;" asp-validation-for="CategoryName"></span>
+        </div>
+       *@
+       
+    
+        <div class="mb-2 form-check">
+            <input asp-for="Available" class="form-check-input ">
+            <label asp-for="Available" class="form-check-label  fs-5 fst-italic"></label>
+            <span class="text-danger fst-italic" asp-validation-for="Available"></span>
+        </div>
+        <div class="d-grid gap-2  col-8 mx-auto pt-4">
+            <button type="submit" class="btn btn-primary  fst-italic ">Add</button>
+        </div>
+        
+    </form>
+</div>

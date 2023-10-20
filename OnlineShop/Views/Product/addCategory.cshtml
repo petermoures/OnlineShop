@@ -1,0 +1,14 @@
+﻿@model AddCategoryViewModel
+<div class="fs-2 text-center fw-bold fst-italic m-5">Add Category</div>
+<div class="mx-auto w-50 ">
+    <form asp-controller="Product" asp-action="addCategory" method="post">
+        <div class="mb-1 form-group">
+            <label asp-for="CategoryName" class="form-label fs-5 fst-italic"> Category Name</label>
+            <input asp-for="CategoryName" class="form-control ">
+            <span class="text-danger fst-italic" asp-validation-for="CategoryName"></span>
+        </div>
+        <div class="d-grid gap-2  col-8 mx-auto pt-4">
+            <button type="submit" class="btn btn-primary  fst-italic ">Add</button>
+        </div>
+    </form>
+</div>

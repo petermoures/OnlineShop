@@ -1,0 +1,68 @@
+﻿@model Cart
+<h1 class="fst-italic">My Cart</h1>
+<hr />
+<br />
+<br />
+<table class="table text-center">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Type</th>
+            <th>Color</th>
+            <th>Quantity</th>
+            
+            
+
+        </tr>
+    </thead>
+    <tbody >
+
+        @foreach (CartProduct c in Model.CartProducts)
+        {
+            <tr>
+                @foreach(ProductImage image in c.product.ProductImagsss )
+                {
+                    <td><img src="~/photo/@image.path" width="80" height="60" /></td>
+                    break;
+                }
+                
+                <td>@c.product.ProName</td>
+                <td>@c.product.ProPrice</td>
+                <td >@c.product.category.CateName</td>
+                <td>@c.product.Color</td>
+                <td>
+                    <a asp-controller="Cart" asp-action="IncreadeToCart" asp-route-id="@c.ProductId" class=" text-dark">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-file-plus-fill" viewBox="0 0 16 16">
+                            <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0z"/>
+                            </svg>
+                        </span>
+                    </a>
+                    <span class="p-3">@c.Quantity</span>
+                    <a asp-controller="Cart" asp-action="DeleteFromCart" asp-route-id="@c.ProductId" class=" text-dark">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-file-minus-fill" viewBox="0 0 16 16">
+                                <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM6 7.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1 0-1z" />
+                            </svg>
+                        </span>
+                    </a>
+                    
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="d-flex justify-content-between pt-4 ">
+    <a asp-controller="Home" asp-action="Index" class="btn btn-success text-black mb-1 d-grid gap-2 col-2 fs-5 fw-bold fst-italic">All Product</a>
+    <a asp-controller="Order" asp-action="MakeOrder" class="btn btn-warning mb-1  d-grid gap-2 col-5 fs-5 fw-bold fst-italic"> Make Order (@Model.totalQuantity)</a>
+    <p class="fs-5 fw-bold fst-italic">Total Price= @Model.TotalPrice</p>
+    
+ </div>
+
+<div class="d-flex justify-content-between pt-4 ">
+    <a asp-controller="Category" asp-action="GetLaptops" class="btn btn-primary text-black mb-1 d-grid gap-2 col-2 fs-5 fw-bold fst-italic">Laptops</a>
+    <a asp-controller="Category" asp-action="GetPhones" class="btn btn-info text-black mb-1 d-grid gap-2 col-2 fs-5 fw-bold fst-italic">Phones</a>
+    <a asp-controller="Category" asp-action="GetSamrtTv" class="btn btn-secondary text-black mb-1 d-grid gap-2 col-2 fs-5 fw-bold fst-italic">TV</a>
+</div>

@@ -1,0 +1,164 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = OnlineShop
+build_property.RootNamespace = OnlineShop
+build_property.ProjectDir = E:\AOU\ITIIIIIIIIII\doop\OnlineShopRepo\OnlineShop\OnlineShop\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
+build_property.MSBuildProjectDirectory = E:\AOU\ITIIIIIIIIII\doop\OnlineShopRepo\OnlineShop\OnlineShop
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Cart/DeleteFromCart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxEZWxldGVGcm9tQ2FydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Cart/IncreadeToCart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmNyZWFkZVRvQ2FydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Cart/ItemInCart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJdGVtSW5DYXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Category/AddToCartLap.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQWRkVG9DYXJ0TGFwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Category/AddToCartPhon.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQWRkVG9DYXJ0UGhvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Category/AddToCartTV.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQWRkVG9DYXJ0VFYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Category/addToFavouriteLap.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcYWRkVG9GYXZvdXJpdGVMYXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Category/addToFavouritePhon.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcYWRkVG9GYXZvdXJpdGVQaG9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Category/addToFavouriteTV.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcYWRkVG9GYXZvdXJpdGVUVi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Category/GetLaptops.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcR2V0TGFwdG9wcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Category/GetPhones.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcR2V0UGhvbmVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Category/GetSamrtTv.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcR2V0U2FtcnRUdi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Favourite/addToFavourite.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmF2b3VyaXRlXGFkZFRvRmF2b3VyaXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Favourite/FavouriteItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmF2b3VyaXRlXEZhdm91cml0ZUl0ZW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Order/DeleteOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRGVsZXRlT3JkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Order/GetAllOrders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcR2V0QWxsT3JkZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Order/MakeOrder.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcTWFrZU9yZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Product/addCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxhZGRDYXRlZ29yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Product/AddProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxBZGRQcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Product/addProductImage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxhZGRQcm9kdWN0SW1hZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Product/AddToCart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxBZGRUb0NhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Product/DeleteProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZWxldGVQcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Product/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Product/Get.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxHZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Product/ProductDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kdWN0RGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Product/RemoveItem.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxSZW1vdmVJdGVtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Product/UpdateProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxVcGRhdGVQcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Role/AddRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZVxBZGRSb2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/User/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/User/SignIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxTaWduSW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/AOU/ITIIIIIIIIII/doop/OnlineShopRepo/OnlineShop/OnlineShop/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-62ip2yfgpx
